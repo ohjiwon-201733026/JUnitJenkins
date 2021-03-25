@@ -22,9 +22,11 @@ public class StudentMapperTests {
 
     // student 테이블에서 중복되지 않는 새 학번(studentNo)을 생성하여 리턴한다
     String newStudentNo() {
+
         for (int i = 201032000; i < 999999999; ++i) {
             String s = String.valueOf(i);
             if (studentMapper.findByStudentNo(s) == null)
+            	System.out.println(s);
                 return s;
         }
         return null;
