@@ -14,6 +14,7 @@ import jp.co.dto.Student;
 @Mapper
 public interface StudentMapper {
 
+
     @Select("SELECT * FROM Student WHERE id = #{id}")
     Student findById(int id);
 
