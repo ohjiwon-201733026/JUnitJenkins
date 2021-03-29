@@ -1,5 +1,6 @@
 package jp.co.mapper;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 import java.util.List;
 
@@ -106,19 +107,10 @@ public class StudentMapperTests {
         Student student2 = studentMapper.findById(student1.getId());
         assertEquals(student1, student2);
 
-        // 다시 값 수정
-        student1.setStudentNo(newStudentNo());
-        student1.setName("오지원");
-        student1.setDepartmentId(2);
-        student1.setPhone("010-456-7890");
-        student1.setEmail("lim@medialog.co.kr");
-        student1.setSex("남");
+    }
 
-        // 저장
-        studentMapper.update(student1);
-
-        // 잘 저장되었는지 확인
-        student2 = studentMapper.findById(student1.getId());
-        assertEquals(student1, student2);
+    @Test
+    public void testCaseFail() {
+    	fail();
     }
 }
