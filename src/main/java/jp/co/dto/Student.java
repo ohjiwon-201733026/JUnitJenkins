@@ -5,7 +5,7 @@ import lombok.EqualsAndHashCode;
 
 @Data
 public class Student {
-	int id;
+	int id
 	String studentNo;
 	String name;
 	int departmentId;
